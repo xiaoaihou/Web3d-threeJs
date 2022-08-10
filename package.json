@@ -1,0 +1,56 @@
+{
+  "name": "web3d",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "types": "tsc",
+    "build": "vue-tsc --noEmit && vite build",
+    "rollup": "tsc && rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-replace": "^3.0.0",
+    "@types/three": "^0.138.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "@vue/compiler-sfc": "^3.2.20",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "cannon": "^0.6.2",
+    "esbuild": "^0.14.21",
+    "eslint": "^8.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "gsap": "^3.5.1",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-esbuild": "^4.1.0",
+    "stats.js": "0.17.0",
+    "three": "^0.138.3",
+    "typescript": "^4.1.5",
+    "vite": "^2.6.13",
+    "vue": "^3.2.20",
+    "vue-eslint-parser": "^8.0.1",
+    "vue-tsc": "^0.31.4"
+  },
+  "main": "build/web3d.js",
+  "module": "build/web3d.module.js",
+  "types": "build/web3d.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoaihou/Web-3DModel"
+  },
+  "keywords": [
+    "threejs",
+    "vuejs",
+    "webgl",
+    "vitejs"
+  ],
+  "author": "wenhongl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoaihou/Web-3DModel"
+  },
+  "homepage": "https://github.com/xiaoaihou/Web-3DModel"
+}
