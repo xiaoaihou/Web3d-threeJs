@@ -17,8 +17,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { Camera, PointLight, Renderer, RendererPublicInterface, Scene, GltfModel } from '../../export'
-import { AnimationMixer, Clock, WebGLRenderer, Camera as Camera1 } from 'three'
+import { AnimationMixer, Clock, WebGLRenderer, Camera as Camera1, MeshLambertMaterial } from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { TextureLoader } from 'three/src/loaders/TextureLoader.js'
 
 export default defineComponent({
   name: 'womanWorkout',
@@ -63,13 +64,18 @@ export default defineComponent({
     },
     onLoad(model: any) {
       this.model = model
-      this.model.scene.traverse(function(node) {
-        console.log('name', node.name)
+      this.model.scene.traverse(function(node:object) {
         if (node.name === 'Glasses_70') {
-          console.log('node', node)
-          node.rotation.y +=10
-          // node.scale.x += 100
-          // node.scale.y += 100
+          node.rotation.y += 10
+        }
+        // 获取需贴纸的材质列表
+        if (node.material) {
+          if (node.material.id === 22) {
+            console.log('material', node.material)
+            node.material = new MeshLambertMaterial({
+              map: new TextureLoader().load('image.jpg')
+            });
+          }
         }
       })
       this.animations = model.animations

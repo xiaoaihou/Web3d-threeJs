@@ -52,5 +52,8 @@
   "bugs": {
     "url": "https://github.com/xiaoaihou/Web-3DModel"
   },
-  "homepage": "https://github.com/xiaoaihou/Web-3DModel"
+  "homepage": "https://github.com/xiaoaihou/Web-3DModel",
+  "dependencies": {
+    "vue-router": "^4.1.3"
+  }
 }

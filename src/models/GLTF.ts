@@ -6,14 +6,14 @@ import { Mesh } from 'three/src/objects/Mesh.js'
 import { Vector2 } from 'three/src/math/Vector2.js'
 import Model from './Model'
 import sizeof from 'object-sizeof'
-import { indexDBStore } from 'indexdb-store'
-const store = indexDBStore.createStore('WDB', 'myStore', {
-  version: 1,
-  onupgradeHandler: (store, request, event) => {
-    store.createIndex('IdIndex', 'id', { unique: true })
-    console.log(request, event)
-  },
-})
+// import { indexDBStore } from 'indexdb-store'
+// const store = indexDBStore.createStore('WDB', 'myStore', {
+//   version: 1,
+//   onupgradeHandler: (store, request, event) => {
+//     store.createIndex('IdIndex', 'id', { unique: true })
+//     console.log(request, event)
+//   },
+// })
 
 
 export default defineComponent({
